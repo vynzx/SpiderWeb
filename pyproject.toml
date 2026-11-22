@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spiderweb"
+version = "1.0.0"
+dependencies = [
+    "click",
+    "requests",
+    "beautifulsoup4",
+    "colorama"
+]
+
+[project.scripts]
+spiderweb = "spiderweb:crawl"
+
+[tool.setuptools]
+py-modules = ["spiderweb"]
