@@ -36,7 +36,7 @@ def crawl(target):
   # Get the HTML of the page
   page = requests.get(url)
   soup = b(page.text, "html.parser")
-  # Get all the links in the HTML
+  # Get all the links with a href in the HTML
   links = soup.find_all("a", href=True)
   for link in links:
     # For example, if the link is "/page", this line add the base of the url before "/page"
